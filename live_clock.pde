@@ -38,6 +38,9 @@ void draw()
     clocks.draw(currentTime.get(Calendar.HOUR), 
     currentTime.get(Calendar.MINUTE), currentTime.get(Calendar.SECOND), transition);
     prevMillis = currentMillis;
+    
+    if (prevMillis == 59)
+      prevMillis = -1;
   }
 }
 
